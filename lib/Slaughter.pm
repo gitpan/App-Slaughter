@@ -22,13 +22,26 @@ It is loaded via:
 This usage actually dynamically loads the appropriate module from beneath the
 Slaughter::API namespace - which will contain the primitive implementation.
 
-Initially we load the Slaughter::API::generic module which contains pure-perl
-implemenation, and then we load the OS-specific module.
+Initially we load the L<Slaughter::API::generic> module which contains pure-perl
+implemenation, and then we load the OS-specific module from the supported set:
 
-Assuming that the OS-specific module, e.g. C<Slaughter::API::linux>, is loaded
-successfully we then load any local OS-specific module.  (e.g. C<Slaughter::API::Local::linux>.)
+=over 8
 
-Fallback implementations in our generic module merely output this:
+=item L<Slaughter::API::linux>
+
+The implemetnation of our primitive API for GNU/Linux.
+
+=item L<Slaughter::API::freebsd>
+
+The implemetnation of our primitive API for FreeBSD.
+
+=back
+
+Assuming that the OS-specific module is successfully loaded we we will also
+load any I<local> OS-specific module.  (e.g. C<Slaughter::API::Local::linux>.)
+
+Fallback implementations in our generic module merely output a suitable
+error message:
 
 =for example begin
 
@@ -36,37 +49,25 @@ Fallback implementations in our generic module merely output this:
 
 =for example end
 
-This allows compiled policies to execute, without throwing errors, and also report
-upon the primitives which need to be implemented or adapted.
+This allows compiled policies to execute, without throwing errors, and also
+report upon the primitives which need to be implemented or adapted.
 
 =cut
 
 =head1 EXTENSIONS
 
 At the same time as loading the appropriate module from beneath the
-Slaughter::API name-space this module will attempt to load an identically
+C<Slaughter::API> name-space this module will attempt to load an identically
 named module from beneath the Slaughter::API::Local namespace.
 
 This allows you to keep develop your own custom-primitives.
 
 =cut
 
-=head1 AUTHOR
 
- Steve
- --
- http://www.steve.org.uk/
+=head1 METHODS
 
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2010-2012 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
+Now follows documentation on the available methods.
 
 =cut
 
@@ -78,7 +79,7 @@ use warnings;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.0";
+our $VERSION = "3.0.1";
 
 BEGIN
 {
@@ -123,3 +124,22 @@ BEGIN
 
 
 1;
+
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut

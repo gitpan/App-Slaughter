@@ -503,25 +503,17 @@ The first file to complare.
 
 =item File2 [mandatory]
 
-The second file to complare.
+The second file to compare.
 
 =back
 
 The return value will depend on the matching:
 
-=over 8
+-1 Returned on error; either missing parameters, or non-existing files.
 
-=item -1
+0  The files are different.
 
-Returned on error; either missing parameters, or non-existing files.
-
-=item 0
-
-The files are different.
-
-=item 1
-
-The files are identical.
+1  The files are identical.
 
 =back
 
@@ -675,15 +667,9 @@ action carried out:
 Returned on error; either missing parameters, or failure to perform
 the fetch.
 
-=item 0
+0 - The fetch resulted in no change.
 
-The fetch resulted in no change.
-
-=item 1
-
-The local file was replaced with the remote one.
-
-=back
+1 - The local file was replaced with the remote one.
 
 =cut
 

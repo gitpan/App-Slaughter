@@ -23,6 +23,7 @@ my %WriteMakefileArgs = (
                      "Pod::Usage"    => 0,
                      "POSIX"          => 0,
                      "Text::Template" => 0,
+                     "Mojo::UserAgent" => 0,
                  },
     TEST_REQUIRES => {
 

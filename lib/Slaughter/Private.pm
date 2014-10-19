@@ -15,25 +15,11 @@ Users are not expected to use, touch, browse, or modify the code in this module!
 =cut
 
 
-=head1 AUTHOR
+=head1 METHODS
 
- Steve
- --
- http://www.steve.org.uk/
+Now follows documentation on the available methods.
 
 =cut
-
-=head1 LICENSE
-
-Copyright (c) 2010-2013 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
-
-=cut
-
 
 use strict;
 use warnings;
@@ -189,3 +175,22 @@ sub checksumFile
 
 
 1;
+
+
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut

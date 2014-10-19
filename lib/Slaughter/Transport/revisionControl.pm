@@ -88,22 +88,10 @@ For a sample implementation please consult C<Slaughter::Transport::hg>.
 
 =cut
 
-=head1 AUTHOR
 
- Steve
- --
- http://www.steve.org.uk/
+=head1 METHODS
 
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2012-2013 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
+Now follows documentation on the available methods.
 
 =cut
 
@@ -187,6 +175,8 @@ sub isAvailable
 {
     my ($self) = (@_);
 
+    $self->{ 'error' } = "";
+
     #
     #  If the _init method didn't get called we've not been subclassed,
     # and that means we don't have the commands we should run setup.
@@ -205,14 +195,14 @@ sub isAvailable
         return 0;
     }
 
-    if ( system("$self->{'cmd_version'} >/dev/null 2>/dev/null") == 0 )
+    if ( system("$self->{'cmd_version'} >/dev/null 2>/dev/null") != 0 )
     {
-
         $self->{ 'error' } =
           "Failed to execute '$self->{'cmd_version'}', is $self->{'name'} installed?\n";
-        return 1;
+        return 0;
     }
-    return 0;
+
+    return 1;
 }
 
 
@@ -355,3 +345,22 @@ sub fetchContents
 
 
 1;
+
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut

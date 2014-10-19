@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               App-Slaughter
-version:            3.0.0
+version:            3.0.1
 abstract:           The Slaughter System Administration Utility.
 author:
     - Steve Kemp <steve@steve.org.uk>
@@ -11,17 +11,18 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    File::Basename:  0
-    File::Find:      0
-    File::Path:      0
-    File::Spec:      0
-    File::Temp:      0
-    Getopt::Long:    0
-    LWP::UserAgent:  0
-    perl:            5.008
-    Pod::Usage:      0
-    POSIX:           0
-    Text::Template:  0
+    File::Basename:   0
+    File::Find:       0
+    File::Path:       0
+    File::Spec:       0
+    File::Temp:       0
+    Getopt::Long:     0
+    LWP::UserAgent:   0
+    Mojo::UserAgent:  0
+    perl:             5.008
+    Pod::Usage:       0
+    POSIX:            0
+    Text::Template:   0
 resources:
     bugtracker:  https://github.com/skx/slaughter/issues
     GitMirror:   http://git.steve.org.uk/skx/slaughter
