@@ -16,10 +16,11 @@ is executed, they are used to populate a hash with information about
 the current host.
 
 This module is loaded when no specific module matches the local system,
-and is essentially a no-operation module.
+and is essentially a no-operation module.  A real info-module is loaded
+by consulting with the value of C<$^O>, so for example we might load
+C<Slaughter::Info::linux>.
 
 Usage is:
-
 
 =for example begin
 
@@ -32,25 +33,15 @@ Usage is:
 
 B<NOTE>: The data retrieved by this generic module is almost empty.
 
-=cut
-
-
-=head1 AUTHOR
-
- Steve
- --
- http://www.steve.org.uk/
+The only user-callable method is the C<getInformation> method which
+is designed to return a hash of data about the current system.
 
 =cut
 
-=head1 LICENSE
 
-Copyright (c) 2010-2012 by Steve Kemp.  All rights reserved.
+=head1 METHODS
 
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
+Now follows documentation on the available methods.
 
 =cut
 
@@ -61,6 +52,10 @@ use warnings;
 
 package Slaughter::Info::generic;
 
+#
+# The version of our release.
+#
+our $VERSION = "3.0.2";
 
 
 
@@ -128,3 +123,22 @@ sub getInformation
 
 
 1;
+
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut

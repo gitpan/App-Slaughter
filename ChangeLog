@@ -1,4 +1,10 @@
 
+3.0.2 - 23rd October 2014
+    * Significant POD fixes and updates.
+	* Minor changes to Slaughter::Private module to make it a real module.
+	* Added LICENSE
+	* Added version number in our modules.
+
 3.0.1 - 19th October 2014
 	* Fail cleanly if the transport isn't loaded.
 	* Removed sample Apache module.

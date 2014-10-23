@@ -1,6 +1,0 @@
-
-new()
-  Constructor
-
-getInformation()
-  Return a hash-reference with "interesting details" about the current system.

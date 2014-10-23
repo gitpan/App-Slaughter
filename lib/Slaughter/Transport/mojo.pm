@@ -54,6 +54,11 @@ use warnings;
 package Slaughter::Transport::mojo;
 
 
+#
+# The version of our release.
+#
+our $VERSION = "3.0.2";
+
 
 
 =head2 new

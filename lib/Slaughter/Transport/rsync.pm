@@ -11,7 +11,7 @@ This transport copes with fetching a remote store to the local system, via rsync
 
 =head1 DESCRIPTION
 
-This module uses the C<Slaughter::Transport::revisionControl> base-class in such
+This module uses the L<Slaughter::Transport::revisionControl> base-class in such
 a way as to offer a rsync-based transport.
 
 All the implementation, except for the setup of some variables, comes from that
@@ -73,6 +73,13 @@ use warnings;
 
 
 package Slaughter::Transport::rsync;
+
+#
+# The version of our release.
+#
+our $VERSION = "3.0.2";
+
+
 
 use parent 'Slaughter::Transport::revisionControl';
 

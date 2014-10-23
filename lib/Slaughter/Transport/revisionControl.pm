@@ -103,6 +103,11 @@ use warnings;
 
 package Slaughter::Transport::revisionControl;
 
+#
+# The version of our release.
+#
+our $VERSION = "3.0.2";
+
 
 
 

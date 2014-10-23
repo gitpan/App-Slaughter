@@ -24,6 +24,13 @@ Now follows documentation on the available methods.
 use strict;
 use warnings;
 
+package Slaughter::Private;
+
+
+#
+# The version of our release.
+#
+our $VERSION = "3.0.2";
 
 
 =head2 fetchFromTransport

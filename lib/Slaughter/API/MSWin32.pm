@@ -16,23 +16,9 @@ may be implemented.  If the loading of this additional module fails we report no
 
 =cut
 
+=head1 METHODS
 
-=head1 AUTHOR
-
- Steve
- --
- http://www.steve.org.uk/
-
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2010-2012 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
+Now follows documentation on the available methods.
 
 =cut
 
@@ -44,15 +30,12 @@ use warnings;
 package Slaughter::API::MSWin32;
 
 
+our $VERSION = "3.0.2";
 
 
-=begin doc
+=head2 import
 
 Export all subs in this package into the main namespace.
-
-This is nasty.
-
-=end doc
 
 =cut
 
@@ -82,7 +65,7 @@ sub import
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -172,7 +155,7 @@ sub FindBinary
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -188,7 +171,7 @@ sub InstallPackage
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -204,7 +187,7 @@ sub Mounts
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -221,7 +204,7 @@ sub PackageInstalled
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -237,7 +220,7 @@ sub PercentageUsed
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -252,7 +235,7 @@ sub RemovePackage
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -267,7 +250,7 @@ sub UserExists
 This method is a stub which does nothing but output a line of text to
 inform the caller that the method is not implemented.
 
-For an implementation, and documentation, please consult C<Slaughter::API::linux>.
+For an implementation, and documentation, please consult L<Slaughter::API::linux>.
 
 =cut
 
@@ -278,3 +261,22 @@ sub UserDetails
 
 
 1;
+
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut

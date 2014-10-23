@@ -17,23 +17,9 @@ may be implemented.  If the loading of this additional module fails we report no
 
 =cut
 
+=head1 METHODS
 
-=head1 AUTHOR
-
- Steve
- --
- http://www.steve.org.uk/
-
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2010-2012 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
+Now follows documentation on the available methods.
 
 =cut
 
@@ -44,7 +30,7 @@ use warnings;
 
 package Slaughter::API::openbsd;
 
-
+our $VERSION = "3.0.2";
 
 
 #
@@ -53,13 +39,9 @@ package Slaughter::API::openbsd;
 use Slaughter::Packages::openbsd;
 
 
-=begin doc
+=head2 import
 
 Export all subs in this package into the main namespace.
-
-This is nasty.
-
-=end doc
 
 =cut
 
@@ -89,7 +71,7 @@ sub import
 
 The InstallPackage primitive will allow you to install a system package.
 
-This method uses C<Slaughter::Packages::openbsd>.
+This method uses L<Slaughter::Packages::openbsd>.
 
 =for example begin
 
@@ -150,7 +132,7 @@ sub InstallPackage
 
 Test whether a given system package is installed.
 
-This method uses C<Slaughter::Packages::openbsd>.
+This method uses L<Slaughter::Packages::openbsd>.
 
 =for example begin
 
@@ -206,7 +188,7 @@ sub PackageInstalled
 
 Remove the specified system package from the system.
 
-This method uses C<Slaughter::Packages::openbsd>.
+This method uses L<Slaughter::Packages::openbsd>.
 
 =for example begin
 
@@ -320,3 +302,22 @@ sub UserCreate
 }
 
 1;
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut
+

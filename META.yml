@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               App-Slaughter
-version:            3.0.1
+version:            3.0.2
 abstract:           The Slaughter System Administration Utility.
 author:
     - Steve Kemp <steve@steve.org.uk>
@@ -22,6 +22,10 @@ requires:
     perl:             5.008
     Pod::Usage:       0
     POSIX:            0
+    Test::More:       0
+    Test::NoTabs:     0
+    Test::Pod:        0
+    Test::Strict:     0
     Text::Template:   0
 resources:
     bugtracker:  https://github.com/skx/slaughter/issues

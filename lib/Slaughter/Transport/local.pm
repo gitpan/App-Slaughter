@@ -46,6 +46,11 @@ use warnings;
 package Slaughter::Transport::local;
 
 
+#
+# The version of our release.
+#
+our $VERSION = "3.0.2";
+
 
 
 =head2 new

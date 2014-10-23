@@ -47,6 +47,11 @@ use warnings;
 
 package Slaughter::Transport::http;
 
+#
+# The version of our release.
+#
+our $VERSION = "3.0.2";
+
 
 
 

@@ -18,22 +18,9 @@ may be implemented.  If the loading of this additional module fails we report no
 =cut
 
 
-=head1 AUTHOR
+=head1 METHODS
 
- Steve
- --
- http://www.steve.org.uk/
-
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2010-2012 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
+Now follows documentation on the available methods.
 
 =cut
 
@@ -46,19 +33,20 @@ package Slaughter::API::linux;
 
 
 #
+#  Our version
+#
+our $VERSION = "3.0.2";
+
+#
 #  Package abstraction helpers.
 #
 use Slaughter::Packages::linux;
 
 
 
-=begin doc
+=head2 import
 
 Export all subs in this package into the main namespace.
-
-This is nasty.
-
-=end doc
 
 =cut
 
@@ -87,7 +75,7 @@ sub import
 
 The InstallPackage primitive will allow you to install a system package.
 
-Currently C<apt-get> and C<yum> are supported, via C<Slaughter::Packages::linux>.
+Currently C<apt-get> and C<yum> are supported, via L<Slaughter::Packages::linux>.
 
 =for example begin
 
@@ -168,7 +156,7 @@ The name of the package to test.
 
 The return value will be a 0 if not installed, or 1 if it is.
 
-Currently C<apt-get> and C<yum> are supported, via C<Slaughter::Packages::linux>.
+Currently C<apt-get> and C<yum> are supported, via L<Slaughter::Packages::linux>.
 
 =cut
 
@@ -222,7 +210,7 @@ The name of the package to remove.
 
 =back
 
-Currently C<apt-get> and C<yum> are supported, via C<Slaughter::Packages::linux>.
+Currently C<apt-get> and C<yum> are supported, via L<Slaughter::Packages::linux>.
 
 =cut
 
@@ -326,3 +314,22 @@ sub UserCreate
 
 
 1;
+
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut
