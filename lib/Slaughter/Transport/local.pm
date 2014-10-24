@@ -18,25 +18,6 @@ remote server involved at all.
 
 =cut
 
-=head1 AUTHOR
-
- Steve
- --
- http://www.steve.org.uk/
-
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2012-2013 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
-
-=cut
-
 
 use strict;
 use warnings;
@@ -49,7 +30,7 @@ package Slaughter::Transport::local;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 
@@ -193,3 +174,21 @@ sub _readFile
 
 
 1;
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut

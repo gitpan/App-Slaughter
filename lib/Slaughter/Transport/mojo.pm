@@ -20,30 +20,6 @@ slaughter with the "C<--username>" & "C<--password>" flags.
 
 =cut
 
-=head1 AUTHOR
-
- Steve
- --
- http://www.steve.org.uk/
-
- and
-
- cstamas
- --
- http://cstamas.hu/
-
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2012-2013 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
-
-=cut
 
 
 use strict;
@@ -57,7 +33,7 @@ package Slaughter::Transport::mojo;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 
@@ -232,3 +208,21 @@ sub fetchContents
 
 
 1;
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut

@@ -31,7 +31,6 @@ lib/Slaughter/Packages/freebsd.pm
 lib/Slaughter/Packages/linux.pm
 lib/Slaughter/Packages/openbsd.pm
 lib/Slaughter/Private.pm
-lib/Slaughter/Transport/API
 lib/Slaughter/Transport/git.pm
 lib/Slaughter/Transport/hg.pm
 lib/Slaughter/Transport/http.pm
@@ -46,7 +45,6 @@ MANIFEST			This list of files
 MANIFEST.SKIP
 README.md
 t/perl-syntax.t
-t/sample-code.t
 t/slaughter-api-file-tests.t
 t/slaughter-api-misc-tests.t
 t/slaughter-api-shell-tests.t

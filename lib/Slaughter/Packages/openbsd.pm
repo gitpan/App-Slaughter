@@ -13,22 +13,9 @@ commands C<pkg_add>, C<pkg_info>, etc.
 
 =cut
 
-=head1 AUTHOR
+=head1 METHODS
 
- Steve
- --
- http://www.steve.org.uk/
-
-=cut
-
-=head1 LICENSE
-
-Copyright (c) 2012 by Steve Kemp.  All rights reserved.
-
-This module is free software;
-you can redistribute it and/or modify it under
-the same terms as Perl itself.
-The LICENSE file contains the full text of the license.
+Now follows documentation on the available methods.
 
 =cut
 
@@ -36,15 +23,16 @@ The LICENSE file contains the full text of the license.
 use strict;
 use warnings;
 
+
 package Slaughter::Packages::openbsd;
 
 
+our $VERSION = "3.0.3";
 
-=begin doc
 
-  Create a new instance of this object.
+=head2 new
 
-=end doc
+Create a new instance of this object.
 
 =cut
 
@@ -70,11 +58,9 @@ sub new
 
 
 
-=begin doc
+=head2 recognised
 
 Does the local system match a known type?
-
-=end doc
 
 =cut
 
@@ -96,11 +82,9 @@ sub recognised
 
 
 
-=begin doc
+=head2 isInstalled
 
 Is the specified package installed?
-
-=end doc
 
 =cut
 
@@ -142,11 +126,9 @@ sub isInstalled
 
 
 
-=begin doc
+=head2 installPackage
 
 Install a package upon the local system.
-
-=end doc
 
 =cut
 
@@ -168,11 +150,9 @@ sub installPackage
 
 
 
-=begin doc
+=head2 removePackage
 
 Remove the specified package.
-
-=end doc
 
 =cut
 
@@ -193,7 +173,23 @@ sub removePackage
 }
 
 
-#
-#  End of the module
-#
 1;
+
+
+
+=head1 AUTHOR
+
+Steve Kemp <steve@steve.org.uk>
+
+=cut
+
+=head1 LICENSE
+
+Copyright (c) 2010-2014 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut

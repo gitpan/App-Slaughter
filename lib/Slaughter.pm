@@ -79,7 +79,7 @@ use warnings;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 BEGIN
 {

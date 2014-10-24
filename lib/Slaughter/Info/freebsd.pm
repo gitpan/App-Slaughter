@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-Slaughter::Info::freebsd - Perl Automation Tool Helper FreeBSD info implementation
+Slaughter::Info::freebsd - Determine information about a FreeBSD host.
 
 =cut
 
@@ -18,7 +18,17 @@ the current host.
 This module is loaded only on FreeBSD systems, and will determine such details
 as the local hostname, the free RAM, any IP addresses, etc.
 
-Usage is:
+The correct information-gathering module is loaded at run-time via the use of the C<$^O> variable, and if no system-specific module is available then the generic L<Slaughter::Info::generic> module is used as a fall-back.
+
+The information discovered can be dumped by running C<slaughter>
+
+=for example begin
+
+      ~# slaughter --dump
+
+=for example end
+
+Usage of this module is as follows:
 
 =for example begin
 
@@ -34,7 +44,7 @@ Usage is:
 =for example end
 
 When this module is used an attempt is also made to load the module
-C<Slaughter::Info::Local::freebsd> - if that succeeds it will be used to
+C<Slaughter::Info::Local::freebsd> and if that succeeds it will be used to
 augment the information discovered and made available to slaughter
 policies.
 
@@ -58,7 +68,7 @@ package Slaughter::Info::freebsd;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 

@@ -30,7 +30,7 @@ use warnings;
 package Slaughter::API::MSWin32;
 
 
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 =head2 import

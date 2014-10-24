@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-Slaughter::Info::generic - Perl Automation Tool Helper generic info implementation
+Slaughter::Info::generic - Determine information about a generic host.
 
 =cut
 
@@ -20,7 +20,15 @@ and is essentially a no-operation module.  A real info-module is loaded
 by consulting with the value of C<$^O>, so for example we might load
 C<Slaughter::Info::linux>.
 
-Usage is:
+The information discovered can be dumped by running C<slaughter>
+
+=for example begin
+
+      ~# slaughter --dump
+
+=for example end
+
+Usage of this module is as follows:
 
 =for example begin
 
@@ -55,7 +63,7 @@ package Slaughter::Info::generic;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 

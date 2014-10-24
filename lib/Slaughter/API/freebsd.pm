@@ -31,7 +31,7 @@ use warnings;
 package Slaughter::API::freebsd;
 
 
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 

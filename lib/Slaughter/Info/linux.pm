@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-Slaughter::Info::linux - Perl Automation Tool Helper linux info implementation
+Slaughter::Info::linux - Determine information about a Linux host.
 
 =cut
 
@@ -18,7 +18,17 @@ the current host.
 This module is loaded only on linux systems, and will determine such details
 as the local hostname, the free RAM, any IP addresses, etc.
 
-Usage is:
+The correct information-gathering module is loaded at run-time via the use of the C<$^O> variable, and if no system-specific module is available then the generic L<Slaughter::Info::generic> module is used as a fall-back.
+
+The information discovered can be dumped by running C<slaughter>
+
+=for example begin
+
+      ~# slaughter --dump
+
+=for example end
+
+Usage of this module is as follows:
 
 =for example begin
 
@@ -56,7 +66,7 @@ package Slaughter::Info::linux;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 =head2 new

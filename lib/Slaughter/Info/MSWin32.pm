@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-Slaughter::Info::MSWin32 - Perl Automation Tool Helper Windows info implementation
+Slaughter::Info::MSWin32 - Determine information about a Windows host.
 
 =cut
 
@@ -18,7 +18,17 @@ the current host.
 This module is loaded only on Windows systems, and will determine such details
 as the operating system version, the processor type, etc.
 
-Usage is:
+The correct information-gathering module is loaded at run-time via the use of the C<$^O> variable, and if no system-specific module is available then the generic L<Slaughter::Info::generic> module is used as a fall-back.
+
+The information discovered can be dumped by running C<slaughter>
+
+=for example begin
+
+      ~# slaughter --dump
+
+=for example end
+
+Usage of this module is as follows:
 
 =for example begin
 
@@ -56,7 +66,7 @@ package Slaughter::Info::MSWin32;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.2";
+our $VERSION = "3.0.3";
 
 
 
