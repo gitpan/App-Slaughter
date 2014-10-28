@@ -27,7 +27,7 @@ use warnings;
 package Slaughter::Packages::openbsd;
 
 
-our $VERSION = "3.0.3";
+our $VERSION = "3.0.4";
 
 
 =head2 new

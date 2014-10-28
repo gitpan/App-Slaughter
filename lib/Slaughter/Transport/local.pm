@@ -30,7 +30,7 @@ package Slaughter::Transport::local;
 #
 # The version of our release.
 #
-our $VERSION = "3.0.3";
+our $VERSION = "3.0.4";
 
 
 

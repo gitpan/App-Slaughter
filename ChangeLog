@@ -1,4 +1,7 @@
 
+3.0.4 - 28th October 2014
+    * Prevent multiple simultaneous runs.
+
 3.0.3 - 24th October 2014
     * Updated MANIFEST to be current.
 	* Updated POD for many modules.

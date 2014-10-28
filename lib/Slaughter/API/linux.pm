@@ -35,7 +35,7 @@ package Slaughter::API::linux;
 #
 #  Our version
 #
-our $VERSION = "3.0.3";
+our $VERSION = "3.0.4";
 
 #
 #  Package abstraction helpers.

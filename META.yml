@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               App-Slaughter
-version:            3.0.3
+version:            3.0.4
 abstract:           The Slaughter System Administration Utility.
 author:
     - Steve Kemp <steve@steve.org.uk>

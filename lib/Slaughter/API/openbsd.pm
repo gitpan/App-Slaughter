@@ -30,7 +30,7 @@ use warnings;
 
 package Slaughter::API::openbsd;
 
-our $VERSION = "3.0.3";
+our $VERSION = "3.0.4";
 
 
 #

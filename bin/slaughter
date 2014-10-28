@@ -213,6 +213,7 @@ use strict;
 use warnings;
 
 use English;
+use Fcntl qw(:flock);
 use File::Basename qw! basename !;
 use File::Path qw! mkpath !;
 use File::Spec;
@@ -260,6 +261,15 @@ if ( $CONFIG{ 'dump' } )
     }
     exit;
 }
+
+
+#
+#  At this point we should lock ourselves - we've parsed the command-line
+# and we might have an updated lockfile - because this is the start of
+# "real" work.
+#
+createLock();
+
 
 #
 #  Create a temporary directory, some transports need such a thing.
@@ -370,6 +380,18 @@ sub defaultOptions
                  delay         => -1,
                );
 
+
+    #
+    #  The lockfile will be located in a predictable location.
+    #
+    foreach my $tmpdir (qw! /var/tmp /tmp C:/Temp C:/ !)
+    {
+        if ( ( -d $tmpdir ) &&
+             ( !$defs{ 'lockfile' } ) )
+        {
+            $defs{ 'lockfile' } = "$tmpdir/slaug.lck";
+        }
+    }
 
     #
     # The platform/OS.
@@ -629,6 +651,7 @@ sub parseCommandLine
             "mail",       \$CONFIG{ 'mail' },
             "dump",       \$CONFIG{ 'dump' },
             "delay=i",    \$CONFIG{ 'delay' },
+            "lockfile=s", \$CONFIG{ 'lockfile' },
             "role=s",     \$CONFIG{ 'role' },
             "transports", \$CONFIG{ 'transports' },
             "no-delete",  \$CONFIG{ 'nodelete' },
@@ -695,6 +718,43 @@ sub parseCommandLine
 }
 
 
+=begin doc
+
+Create a lockfile, which will be removed on process-termination.
+
+=end doc
+
+=cut
+
+sub createLock
+{
+
+    #
+    #  Get the lockfile - if we failed to define one then abort.
+    #
+    my $lockfile = $CONFIG{ 'lockfile' };
+    return unless ($lockfile);
+
+
+    #
+    # Open the lock-file exclusively.
+    #
+    open( LOCK, ">>", $lockfile ) or
+      die "Failed to open lockfile at $lockfile - $!";
+
+    #
+    # Lock the file.
+    #
+    flock( LOCK, LOCK_EX | LOCK_NB ) or
+      die "$0 already running - Lock file $lockfile is locked";
+
+
+    #
+    # The file will be closed when slaughter terminates so although it
+    # looks like we're leaking a handle here this is intentional.
+    #
+
+}
 
 =begin doc
 
